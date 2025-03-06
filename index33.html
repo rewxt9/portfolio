@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style33.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#sek1" onclick="showSection('home')">Home</a></li>
+            <li><a href="#sek2" onclick="showSection('about')">About</a></li>
+            <li><a href="#sek3" onclick="showSection('projekty')">Project</a></li>
+            <li><a href="#sek4" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+    <div class="sek">
+    <section id="home" class="hidden">
+        
+        <p>Witamy w świecie programowania
+            Tworzymy rozwiązania, które napędzają cyfrową transformację. Specjalizujemy się w budowie wydajnych aplikacji, projektowaniu nowoczesnych stron internetowych i wdrażaniu innowacyjnych technologii. Naszym celem jest dostarczanie najwyższej jakości produktów, które spełniają potrzeby naszych klientów i przewyższają ich oczekiwania.</p>
+            <p>
+            Dołącz do nas i zobacz, jak kod zamienia wizje w rzeczywistość. 
+            </p>
+            <p>Zobacz CV:</p>
+
+            <button><a href="Знімок екрана 2025-01-24 122250.png" onclick="openModal(); return false;">klikaj</a></button>
+            <div id="imageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img src="Знімок екрана 2025-01-24 122250.png" alt="Obrazek" />
+                </div>
+            </div>
+    </section>
+    <section id="about" class="hidden">
+        <details>
+        <summary>Kim jestem?</summary>
+       <p> Jestem fanem programowania z wieloletnim doświadczeniem w tworzeniu aplikacji webowych, mobilnych i desktopowych. Moja misja to pomoc firmom i osobom prywatnym w osiąganiu ich celów dzięki technologii.
+            Nie boimy się wyzwań – pracujemy nad projektami w różnych językach programowania, takich jak JavaScript. Działam kreatywnie, efektywnie i zawsze na czas.</p>
+        </details>
+            <h2>Umiętności:</h2>
+            <div class="cards">
+                <div class="card1">
+                    <img src="HTML5_logo_and_wordmark.svg-2.png" width="180px" height="200px">
+                    <div class="text1">
+                    <h4><b>HTML5</b></h4>
+                    <meter min="0" max="100" value="100">100%</meter>
+                    </div>
+                </div>
+                <div class="card2">
+                    <img src="CSS 3.png" width="450px" height="200px">
+                    <div class="text1">
+                        <h4><b>CSS</b></h4>
+                        <meter min="0" max="100" value="100">100%</meter>
+                        </div>
+                </div>
+                <div class="card3">
+                    <img src="JavaScript-Symbol.png" width="350px" height="200px">
+                    <div class="text1">
+                        <h4><b>JS</b></h4>
+                        <meter min="0" max="100" value="50">100%</meter>
+                        </div>
+                </div>
+            </div>
+    </section>
+    <section id="projekty" class="hidden">
+        <p>Tworzę nowoczesne aplikacje, responsywne strony internetowe i innowacyjne rozwiązania IT. Każdy projekt to okazja, by pokazać kreatywność, 
+            precyzję i pasję do programowania. Zobacz moje realizacje i przekonaj się, jak mogę Ci pomóc!</p>
+            <div class="pro">
+                
+            <div class="pr1">
+                    <h4><b>Strona dla szkoły</b></h4>
+                    <button class="bp"><a href="login.html">zobacz</a></button>
+                    </div>
+
+                    <div class="pr2">
+                            <h4><b>FlexBox</b></h4>
+                            <button class="bp"><a href="index12.html">zobacz</a></button>
+                    </div>
+
+                            <div class="pr3">
+                                
+                                    <h4><b>Strona dla szkoły</b></h4>
+                                    <button class="bp"><a href="login.html">zobacz</a></button>
+                                    
+                                </div>
+    </section>
+
+    <section id="contact" class="hidden">
+       <h2>Contact</h2>
+       <p>Skontaktuj się ze mną
+        Masz pytania? Potrzebujesz wsparcia w swoim projekcie? A może chcesz porozmawiać o swoich pomysłach?
+        Jestem tutaj, aby pomóc!</p>
+
+        <div class="contact-info">
+            <span>📧 <strong>E-mail:</strong>lybandana@gmail.com</span>
+            <span>📞 <strong>Telefon:</strong> +48 503 936 068</span>
+            <span>🏢 <strong>Adres:</strong>Kraków,Prokocimska 53/2</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1737500863839!6m8!1m7!1sBsyY62Dl_-xXhtchEZz25g!2m2!1d50.0329877269368!2d19.97459238849368!3f136.94661137226467!4f-0.07267895973559746!5f0.7820865974627469" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <form action="mailto:lybandana@gmail.com" method="POST" class="contact-form" enctype="text/plain">
+            <input type="text" name="name" placeholder="Twoje imię" required class="inp">
+            <input type="email" name="email" placeholder="Twój e-mail" required>
+            <textarea name="message" rows="5" placeholder="Twoja wiadomość" required></textarea>
+            <button type="submit" class="submit">Wyślij wiadomość</button>
+          </form>
+    </section>
+</div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+        section.classList.add("hidden"); 
+    });
+
+    
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.classList.remove("hidden"); 
+    }
+}
+
+
+function openModal() {
+    document.getElementById("imageModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+    </script>
+</body>
+</html>
